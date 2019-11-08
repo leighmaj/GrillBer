@@ -1,100 +1,213 @@
-<h1>GrillBer</h1>
-<hr>
-<p>GrillBer is a rental and delivery service for grills! Grill 
-renters can put up the specs and descriptions for their grills, 
-and users can rent them for specific amounts of time! The grill 
-owner will drop off the grill at the designated time and 
-location, and then pick it back up when the user is 
-finished! </p>
-<hr>
-<table>
-    <thead>
-        <tr><strong>
-            <td>Brand and Model of Grill</td>
-            <td>Username of Grill Renter</td>
-            <td>City Location</td>
-            <td>Cost per hr</td>
-            <td>Delivery Cost</td>
-            <td>Grill Rating (1 to 5)</td>
-        </strong></tr>
-    </thead>
-    <tbody>
-        <tr>
-           <td>Weber</td> 
-           <td>Leigh Ann</td>
-           <td>Columbia</td>
-           <td>$20</td>
-           <td>$25</td>
-           <td>4</td>
-        </tr>
-        <tr>
-            <td>RedOak</td>
-            <td>Joelle</td>
-            <td>Chicago</td>
-            <td>$15</td>
-            <td>$20</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>Smoky</td>
-            <td>Garrett</td>
-            <td>STL</td>
-            <td>$35</td>
-            <td> $5</td>
-            <td> 3.5</td>
-        </tr>
-        <tr>
-            <td>Weber</td>
-            <td>Ryan</td>
-            <td>Kansas City</td>
-            <td>$5</td>
-            <td>$10</td>
-            <td>2.5</td>
-        </tr>
-        <tr>
-            <td>Grillerz</td>
-            <td>Kayla</td>
-            <td>Dallas</td>
-            <td>$10</td>
-            <td>$12</td>
-            <td>4</td>
-        </tr>
-    </tbody>
-</table>
-<hr>
-<h2>FAQ</h2>
-<hr>
-<h3>Q: How do I pay the owner of the Grill?</h3>
-<h4>A: We accept Venmo and Apple Pay.</h4>
+<head>
+    <style>
+        body {
+            background-color: #7D9AFF;
+            color: #CC411B;
+            font-size: 22px;
+            margin: 0px;
+        }
 
-<h3>Q: Do I have to clean the grill before I return it?</h3>
-<h4>A: Yes, please clean the grill after each use, and prior to 
-    returning the grill. If the grill is not returned in same
-    fashion it was received, there will be an additional 
-    charge.</h4>
+        h1 {
+            color: #C22E06;
+            text-align: center;
+            background-color: #CDFF94;
+            border: 1px solid #CDFF94;
+            margin: 0px;
+        }
 
-<h3>Q: How does the grill get to me?</h3>  
-<h4>A: Once you select your grill, you provide the owner with a 
-    date and time, and the owner will make sure you get it
-    on time!
-</h4>  
-<hr>
-<h2>How? and Why GrillBer??</h2>
-<h3>GrillBer eliminates the need for purchasing your own grill! 
-    Maybe your apartment doesn't let you have one, but you want
-    one for all those tailgates you attend! Let us do all the 
-    work, and you just bring the meat and get grillin'!
-</h3>
-<hr>
-<form>
-    First and Last Name:<br>
-    <input type="text" name="firstandlastname"><br>
-    Email Address:<br>
-    <input type="text" email="email"><br>
-    Phone Number:<br>
-    <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
-    How likely are you to reccomend GrillBer to a friend? (1 being least likely, 10 being most likely)<br>
-    <input type="number" name="quantity" min="1" max="10"><br>
-    <input type="submit"><br>
-</form>
+        h2 {
+            color: #CDFF94;
+            text-align: center;
+            white-space: normal;
+        }
 
+        h4 {
+            white-space: normal;
+        }
+
+        h3 {
+            color: #CDFF94;
+            text-shadow: 1px 1px #75B82A;
+            white-space: normal;
+        }
+
+        thead {
+            background-color: #75B82A;
+            font-style: italic;
+            color: white;
+        }
+
+        p {
+            text-align: justify;
+            white-space: normal;
+        }
+
+        table,
+        td {
+            border: 1px solid black;
+            font-weight: 700;
+            font-size: 22px;
+            
+        }
+
+        tr:nth-child(even) {
+            background-color: #CDFF94;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .numbers {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .faq {
+            margin-bottom: 2%;
+            border: 5px solid white;
+            border-radius: 10px;
+
+        }
+
+        .margin {
+            margin: 10%;
+            margin-top: 0%;
+            white-space: nowrap;
+        }
+
+        .half {
+            width: 50%;
+            margin-right: 1%;
+
+        }
+
+        .half2 {
+            width: 50%;
+            margin-left: 1%;
+        }
+
+        .flex {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>GrillBer</h1>
+    <hr>
+    <div class="margin">
+        <p>GrillBer is a rental and delivery service for grills! Grill
+            renters can put up the specs and descriptions for their grills,
+            and users can rent them for specific amounts of time! The grill
+            owner will drop off the grill at the designated time and
+            location, and then pick it back up when the user is
+            finished! </p>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                    <td>Brand and Model of Grill</td>
+                    <td>Username of Grill Renter</td>
+                    <td>City Location</td>
+                    <td>Cost per hr</td>
+                    <td>Delivery Cost</td>
+                    <td>Grill Rating (1 to 5)</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Weber</td>
+                    <td>Leigh Ann</td>
+                    <td>Columbia</td>
+                    <td class="numbers">$20</td>
+                    <td class="numbers">$25</td>
+                    <td class="numbers">4</td>
+                </tr>
+                <tr>
+                    <td>RedOak</td>
+                    <td>Joelle</td>
+                    <td>Chicago</td>
+                    <td class="numbers">$15</td>
+                    <td class="numbers">$20</td>
+                    <td class="numbers">5</td>
+                </tr>
+                <tr>
+                    <td>Smoky</td>
+                    <td>Garrett</td>
+                    <td>STL</td>
+                    <td class="numbers">$35</td>
+                    <td class="numbers">$5</td>
+                    <td class="numbers">3.5</td>
+                </tr>
+                <tr>
+                    <td>Weber</td>
+                    <td>Ryan</td>
+                    <td>Kansas City</td>
+                    <td class="numbers">$5</td>
+                    <td class="numbers">$10</td>
+                    <td class="numbers">2.5</td>
+                </tr>
+                <tr>
+                    <td>Grillerz</td>
+                    <td>Kayla</td>
+                    <td>Dallas</td>
+                    <td class="numbers">$10</td>
+                    <td class="numbers">$12</td>
+                    <td class="numbers">4</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="flex">
+            <div class="half">
+                <hr>
+                <h2>FAQ</h2>
+                <hr>
+                <div class="faq">
+                    <h3>Q: How do I pay the owner of the Grill?</h3>
+                    <h4>A: We accept Venmo and Apple Pay.</h4>
+                </div>
+                <div class="faq">
+                    <h3>Q: Do I have to clean the grill before I return it?</h3>
+                    <h4>A: Yes, please clean the grill after each use, and prior to
+                        returning the grill. If the grill is not returned in same
+                        fashion it was received, there will be an additional
+                        charge.</h4>
+                </div>
+
+                <div class="faq">
+                    <h3>Q: How does the grill get to me?</h3>
+                    <h4>A: Once you select your grill, you provide the owner with a
+                        date and time, and the owner will make sure you get it
+                        on time!
+                    </h4>
+                </div>
+            </div>
+            <div class="half2">
+                <hr>
+                <h2>How GrillBer? and Why GrillBer??</h2>
+                <hr>
+                <h3>GrillBer eliminates the need for purchasing your own grill!
+                    Maybe your apartment doesn't let you have one, but you want
+                    one for all those tailgates you attend! Let us do all the
+                    work, and you just bring the meat and get grillin'!
+                </h3>
+                <hr>
+            </div>
+        </div>
+        <form>
+            First and Last Name:<br>
+            <input type="text" name="firstandlastname"><br>
+            Email Address:<br>
+            <input type="text" email="email"><br>
+            Phone Number:<br>
+            <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+            How likely are you to reccomend GrillBer to a friend? (1 being least likely, 10 being most likely)<br>
+            <input type="number" name="quantity" min="1" max="10"><br>
+            <input type="submit"><br>
+        </form>
+    </div>
+</body>
